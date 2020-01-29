@@ -881,7 +881,7 @@ class ObjectChange(models.Model):
         fk_field='related_object_id'
     )
     object_repr = models.CharField(
-        max_length=200,
+        max_length=255,
         editable=False
     )
     object_data = JSONField(

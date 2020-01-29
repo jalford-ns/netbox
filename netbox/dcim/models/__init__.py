@@ -1226,12 +1226,12 @@ class Platform(ChangeLoggedModel):
     specifying a NAPALM driver.
     """
     name = models.CharField(
-        max_length=100,
+        max_length=255,
         unique=True
     )
     slug = models.SlugField(
         unique=True,
-        max_length=100
+        max_length=255
     )
     manufacturer = models.ForeignKey(
         to='dcim.Manufacturer',
@@ -1312,7 +1312,7 @@ class Device(ChangeLoggedModel, ConfigContextModel, CustomFieldModel):
         null=True
     )
     name = models.CharField(
-        max_length=64,
+        max_length=255,
         blank=True,
         null=True
     )
