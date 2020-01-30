@@ -86,4 +86,9 @@ class Migration(migrations.Migration):
             name='tags',
             field=taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='extras.TaggedItem', to='extras.Tag', verbose_name='Tags'),
         ),
+        migrations.AlterField(
+            model_name='virtualmachine',
+            name='name',
+            field=models.CharField(max_length=255),
+        ),
     ]

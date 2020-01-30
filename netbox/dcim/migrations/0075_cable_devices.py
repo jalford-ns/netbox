@@ -57,4 +57,19 @@ class Migration(migrations.Migration):
             code=cache_cable_devices,
             reverse_code=migrations.RunPython.noop
         ),
+        migrations.AlterField(
+            model_name='device',
+            name='name',
+            field=models.CharField(blank=True, max_length=255, null=True),
+        ),
+        migrations.AlterField(
+            model_name='platform',
+            name='name',
+            field=models.CharField(max_length=255, unique=True),
+        ),
+        migrations.AlterField(
+            model_name='platform',
+            name='slug',
+            field=models.SlugField(max_length=255, unique=True),
+        ),
     ]

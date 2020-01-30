@@ -201,7 +201,7 @@ class VirtualMachine(ChangeLoggedModel, ConfigContextModel, CustomFieldModel):
         null=True
     )
     name = models.CharField(
-        max_length=64
+        max_length=255
     )
     status = models.CharField(
         max_length=50,
